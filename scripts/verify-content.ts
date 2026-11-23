@@ -170,6 +170,9 @@ const SKIP_DIRS = new Set([
   "node_modules",
   ".git",
   ".next",
+  // Development/security builds are generated snapshots, not source content.
+  ".next-dev",
+  ".next-security",
   "out",
   "design-lab",
   "public",

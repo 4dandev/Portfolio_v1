@@ -48,6 +48,9 @@ design-lab/
 # Screenshot output - regenerate with: node scripts/shoot.mjs
 screenshots/
 
+# Browser QA output must not trigger Tailwind/Next source watchers.
+/.playwright-mcp/
+
 # Creds
 service-account.json
 
