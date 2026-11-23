@@ -5,3 +5,5 @@
 ## CNT 3004 course portfolio
 
 2026-11-22: Before: no course page. After: an unlisted `/cnt-3004` page with the headings “Assignment reflections,” “Quizzes & discussions,” and “Already in my portfolio”; assignment jump links; reflection labels “My experience,” “Skills & concepts,” “The challenge,” and “My takeaway”; and buttons to the existing résumé, projects, and activities. Added at Adan’s request for the final class deliverable. Existing portfolio descriptions and navigation remain unchanged.
+
+2026-11-22: Before: no explicit post-graduation goals section. After: “Professional goals,” with the eyebrow “Looking ahead” and a local jump link. The draft connects existing software-engineering interests to cloud security, the direction Adan selected in this conversation.

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Page, PageTitle, Tags } from "@/components/site/Prose";
-import { assignments, courseReflection } from "@/content/cnt-3004";
+import { assignments, courseReflection, professionalGoals } from "@/content/cnt-3004";
 
 export const dynamic = "force-static";
 
@@ -48,6 +48,7 @@ export default function CoursePortfolioPage() {
         <ul className="flex list-none flex-wrap gap-x-5 gap-y-1 p-0">
           <li><a className="inline-flex min-h-11 items-center text-sm text-accent underline underline-offset-4" href="#assignments">Assignments</a></li>
           <li><a className="inline-flex min-h-11 items-center text-sm text-accent underline underline-offset-4" href="#course-reflection">Quizzes & discussions</a></li>
+          <li><a className="inline-flex min-h-11 items-center text-sm text-accent underline underline-offset-4" href="#professional-goals">Professional goals</a></li>
           <li><a className="inline-flex min-h-11 items-center text-sm text-accent underline underline-offset-4" href="#portfolio">Already in my portfolio</a></li>
         </ul>
       </nav>
@@ -101,6 +102,12 @@ export default function CoursePortfolioPage() {
         <p className="max-w-(--measure) leading-relaxed">{courseReflection}</p>
       </section>
 
+      <section id="professional-goals" aria-labelledby="professional-goals-title" className="mt-12 scroll-mt-8 border-t border-line pt-8">
+        <p className="mb-2 font-mono text-xs uppercase tracking-[0.08em] text-muted">Looking ahead</p>
+        <h2 id="professional-goals-title" className="mb-5 text-xl font-semibold">Professional goals</h2>
+        <p className="max-w-(--measure) leading-relaxed">{professionalGoals}</p>
+      </section>
+
       <section id="portfolio" aria-labelledby="portfolio-title" className="mt-12 scroll-mt-8 border-t border-line pt-8">
         <h2 id="portfolio-title" className="mb-3 text-xl font-semibold">Already in my portfolio</h2>
         <p className="mb-6 max-w-(--measure) text-muted">The following parts of my e-Portfolio are available in the existing sections.</p>
@@ -108,14 +115,14 @@ export default function CoursePortfolioPage() {
           <div className="rounded-(--radius) border border-line p-5">
             <h3 className="mb-2 text-lg font-semibold">Professional résumé</h3>
             <p className="mb-4 text-muted">My résumé is already available as a PDF in the portfolio.</p>
-            <a className={actionClass} href="/Adan_Rojas_Resume.pdf">View résumé <span className="ml-2 font-mono text-xs text-muted">PDF ↗</span></a>
+            <a className={actionClass} href="/Adan_Rojas_Resume.pdf">View résumé <span className="ml-2 font-mono text-xs text-muted">PDF</span></a>
           </div>
           <div className="rounded-(--radius) border border-line p-5">
             <h3 className="mb-2 text-lg font-semibold">Certifications & activities</h3>
             <p className="mb-4 text-muted">My technology projects and extracurricular activities are already documented in Projects and Experience.</p>
             <div className="flex flex-wrap gap-2">
-              <Link className={actionClass} href="/projects">View projects <span aria-hidden="true" className="ml-2">↗</span></Link>
-              <Link className={actionClass} href="/experience">View activities <span aria-hidden="true" className="ml-2">↗</span></Link>
+              <Link className={actionClass} href="/projects">View projects <span aria-hidden="true" className="ml-2">→</span></Link>
+              <Link className={actionClass} href="/experience">View activities <span aria-hidden="true" className="ml-2">→</span></Link>
             </div>
           </div>
         </div>

@@ -21,6 +21,8 @@ const AssignmentSchema = z.object({
 
 // New reflection prose requested by Adan on 2026-11-22. These records are
 // grounded in the supplied completed work, not quotations from the originals.
+// Adan also confirmed challenges with new technologies, Command Prompt,
+// Wireshark, and organized experimentation in this conversation on 2026-11-22.
 // Keep this module out of retrieval/llms/MCP: the course page is unlisted.
 // The original documents and screenshots are deliberately not site assets.
 export const assignments = validate(z.array(AssignmentSchema).min(1), [
@@ -30,9 +32,9 @@ export const assignments = validate(z.array(AssignmentSchema).min(1), [
     title: "Networking foundations and everyday connections",
     topics: ["OSI & TCP/IP", "Encapsulation", "Connectivity tools"],
     parts: [{
-      experience: "I connected the OSI and TCP/IP models to my own network by tracing how a request travels from my laptop through the gateway to a website. I also inspected a browser request and used Windows networking tools to examine connectivity and device configuration.",
+      experience: "I connected the OSI and TCP/IP models to my own network by tracing how a request travels from my laptop through the gateway to a website. I also inspected a browser request and learned to use the Windows Command Prompt to examine connectivity and device configuration.",
       concepts: "I practiced identifying protocol layers, distinguishing IP and MAC addresses, explaining encapsulation, and interpreting ping, traceroute, and Wireshark’s three panes.",
-      challenge: "I had to separate what each tool could actually prove. A successful loopback ping, for example, checks the local TCP/IP stack without proving that the Internet connection works.",
+      challenge: "Getting comfortable with unfamiliar commands challenged me to understand what each tool could actually prove. A successful loopback ping, for example, checks the local TCP/IP stack without proving that the Internet connection works.",
       takeaway: "I learned to troubleshoot in stages and connect a command’s output to a specific part of the network.",
     }],
     _source: "owner",
@@ -46,7 +48,7 @@ export const assignments = validate(z.array(AssignmentSchema).min(1), [
     parts: [{
       experience: "I examined my computer’s addressing, ARP table, and default route, then used Wireshark to follow HTTP, TCP, UDP, and DNS exchanges.",
       concepts: "I practiced matching requests with responses, identifying service and temporary client ports, following the TCP three-way handshake, and explaining DNS records and caching.",
-      challenge: "I had to keep packets from the same connection together and distinguish a name-resolution failure from a conclusion about IPv6 connectivity. Looking at the right ports and packet fields mattered more than relying on a summary alone.",
+      challenge: "Learning to use Wireshark challenged me to keep packets from the same connection together and inspect the right ports and fields. I also had to distinguish a name-resolution failure from a conclusion about IPv6 connectivity.",
       takeaway: "I learned how addressing, routing, and application protocols work together to deliver a request, and how packet evidence can help narrow down a problem.",
     }],
     _source: "owner",
@@ -60,7 +62,7 @@ export const assignments = validate(z.array(AssignmentSchema).min(1), [
     parts: [{
       experience: "I compared copper, fiber, and wireless networking, then analyzed a partial Ubuntu download and a supplied wireless capture. Measuring a real transfer helped me connect link specifications with observed performance.",
       concepts: "I practiced calculating throughput and utilization, distinguishing bandwidth from throughput, and identifying wireless management, control, and data frames.",
-      challenge: "I had to distinguish downloaded file bytes from captured traffic, which also includes overhead and retransmissions. I also accounted for frames that the supplied capture did not classify normally.",
+      challenge: "Keeping my experimentation organized meant tracking what I measured and how I counted it. I had to distinguish downloaded file bytes from captured traffic, which also includes overhead and retransmissions, and account for frames that the supplied capture did not classify normally.",
       takeaway: "I learned that a link’s advertised rate does not describe the application’s actual experience. Useful measurements need clear units, a defined scope, and an explanation of what was counted.",
     }],
     _source: "owner",
@@ -113,4 +115,11 @@ export const assignments = validate(z.array(AssignmentSchema).min(1), [
 export const courseReflection = validate(Text,
   "The main connection I take from the course’s quizzes and discussions is that networking concepts work together. Addressing and routing explain where traffic goes; transport protocols explain delivery; and security controls shape which communication is allowed. The topics I would emphasize are the difference between bandwidth and throughput, TCP and UDP behavior, and the relationship between segmentation and access control. Across these ideas, I learned to explain why a result occurs and what evidence supports it. That approach gives me a stronger foundation for troubleshooting and for thinking about network security.",
   "cnt-3004.ts: course reflection",
+);
+
+// Software engineering/AI/MCP interests are established in profile.ts.
+// Adan selected cloud security as his career direction on 2026-11-22.
+export const professionalGoals = validate(Text,
+  "After graduation, my goal is to work as a software engineer building useful, reliable applications, with a continued focus on AI agents, MCPs, and full-stack development. Within cybersecurity, I am interested in cloud security: protecting cloud infrastructure, managing access, and designing secure network connections between services. CNT 3004 gives me a foundation in protocols, traffic analysis, segmentation, and security controls that I can bring into that work. I want to keep strengthening those skills through practical projects and continued learning.",
+  "cnt-3004.ts: professional goals",
 );
