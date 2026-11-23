@@ -53,7 +53,7 @@
         "Try again"
       ],
       "files": ["components/ui/quizComponent.tsx"],
-      "grepTokens": ["quiz"]
+      "grepTokens": ["quizComponent", "A little quiz about Me", "fun little quiz to see how well you know me"]
     },
 
     "videos": {
